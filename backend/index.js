@@ -55,7 +55,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     res.json({ url: `/uploads/${req.file.filename}` });
   } catch (error) {
     console.error('Error uploading file:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Internal Server Eror');
   }
 });
 
