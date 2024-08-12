@@ -27,7 +27,7 @@ const Audio = () => {
 
     try {
       setUploadStatus('Uploading...');
-      const uploadResponse = await axios.post('http://localhost:5000/upload', formData, {
+      const uploadResponse = await axios.post('https://audiobot-ecru.vercel.app/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
 
@@ -35,7 +35,7 @@ const Audio = () => {
       console.log(url);
 
       setUploadStatus('Processing...');
-      const processResponse = await axios.post('http://localhost:5000/process', { fileUrl: url });
+      const processResponse = await axios.post("https://audiobot-ecru.vercel.app/process", { fileUrl: url });
 
       setSummary(processResponse.data.summary);
       setUploadStatus('Completed');
