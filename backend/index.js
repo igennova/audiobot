@@ -49,7 +49,7 @@ const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 app.post('/upload', upload.single('file'), (req, res) => {
   try {
     if (!req.file) {
-      return res.status(400).send('No file uploaded.');
+      return res.status(400).send('No ile uploaded.');
     }
     // Respond with the file path or URL
     res.json({ url: `/uploads/${req.file.filename}` });
