@@ -18,14 +18,12 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Middleware
-app.use(cors(
-  {
-    origin:["https://audiobot-5box.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
+app.use(cors({
+  origin: ["https://audiobot-5box.vercel.app", "https://audiobot-ecru.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true,
+}));
 
-  }
-));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -97,7 +95,7 @@ app.post('/process', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-
+app.get("/",console.log("HELLo"))
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
