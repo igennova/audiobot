@@ -18,7 +18,14 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://your-vercel-domain.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+
+  }
+));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
