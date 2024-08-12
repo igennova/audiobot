@@ -1,0 +1,114 @@
+.audio-recorder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Add some padding for smaller screens */
+  }
+  
+  .audio-recorder-container .recorder {
+    font-size: 10rem; /* Larger microphone icon */
+    color: #007bff; /* Icon color */
+    background-color: #f8f9fa; /* Background color */
+    border-radius: 50%; /* Rounded icon background */
+    padding: 20px; /* Spacing around the icon */
+    box-shadow: 0 4px 8px rgba(139, 206, 5, 0.2); /* Shadow for depth */
+  }
+  
+  .audio-recorder-container audio {
+    margin-top: 20px; /* Space between audio and buttons */
+  }
+  
+  .audio-recorder-container .buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Space above the buttons */
+  }
+  
+  .audio-recorder-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #97cb13;
+    color: #630e0e;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .audio-recorder-container button:hover {
+    background-color: #0056b3;
+  }
+  .heading {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: 1vh; /* Full viewport height for vertical centering */
+    background-color: #0d47a1; /* Background color */
+    color: #ffffff; /* Text color */
+    padding: 20px; /* Padding around the heading */
+    text-align: center; /* Center text alignment */
+  }
+
+.heading h1 {
+    font-size: 5rem; /* Font size for the heading */
+    font-weight: bold; /* Make the heading bold */
+    margin: 0; /* Remove default margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for text */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .heading h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading h1 {
+      font-size: 1.5rem; /* Further adjust font size for very small screens */
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .audio-recorder-container .recorder {
+      font-size: 8rem; /* Smaller microphone icon for tablets and smaller screens */
+      padding: 15px; /* Reduce padding for smaller screens */
+    }
+  
+    .audio-recorder-container button {
+      font-size: 0.9rem; /* Smaller button font size */
+      padding: 8px 16px; /* Adjust button padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .audio-recorder-container .recorder {
+      font-size: 6rem; /* Smaller microphone icon for mobile devices */
+      padding: 10px; /* Further reduce padding */
+    }
+  
+    .audio-recorder-container button {
+      font-size: 0.8rem; /* Smaller button font size */
+      padding: 6px 12px; /* Further adjust button padding */
+    }
+  
+    .audio-recorder-container {
+      padding: 10px; /* Add some padding for very small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .audio-recorder-container .recorder {
+      font-size: 5rem; /* Even smaller microphone icon for very small screens */
+      padding: 8px; /* Minimal padding for very small screens */
+    }
+  
+    .audio-recorder-container button {
+      font-size: 0.7rem; /* Smaller button font size */
+      padding: 5px 10px; /* Minimal button padding */
+    }
+  }
+  

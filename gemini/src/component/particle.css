@@ -1,0 +1,10 @@
+/* Particle.css */
+.particles-background {
+    position: fixed; /* Makes sure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Sets the z-index to -1 */
+  }
+  
