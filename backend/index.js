@@ -19,7 +19,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ["https://audiobot-5box.vercel.app", "https://audiobot-ecru.vercel.app"],
+  origin: ["https://audiobot-5box.vercel.app", "https://audiobot-three.vercel.app/"],
   methods: ["POST", "GET"],
   credentials: true
 }));
