@@ -21,7 +21,7 @@ const app = express();
 app.use(cors({
   origin: ["https://audiobot-5box.vercel.app", "https://audiobot-ecru.vercel.app"],
   methods: ["POST", "GET"],
-  credentials: true,
+  credentials: true
 }));
 
 app.use(bodyParser.json());
@@ -59,7 +59,6 @@ app.post('/upload', upload.single('file'), (req, res) => {
   }
 });
 
-// Handle audio processing
 app.post('/process', async (req, res) => {
   try {
     const { fileUrl } = req.body;
